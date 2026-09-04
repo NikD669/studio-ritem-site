@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontakt — Studio Ritem</title>
+<meta name="description" content="Kontaktirajte Studio Ritem — najdite naš naslov, e-pošto in nam pišite neposredno." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-contact">
+      <a href="mailto:plesna.sprostitev@gmail.com">plesna.sprostitev@gmail.com</a>
+    </div>
+    <div class="topbar-social">
+      <a href="https://www.facebook.com/share/1FZcJgLo23/" target="_blank" aria-label="Facebook">Facebook</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="logo">Studio<span>Ritem</span></a>
+    <nav class="main-nav" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="index.html#about">O nas</a></li>
+        <li><a href="contact.html" class="active">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Preklopi meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: 40px;">
+  <div class="container">
+    <span class="eyebrow">Kontakt</span>
+    <h1>Najdi svoj Groove.</h1>
+    <p class="tagline">Vprašanja o vadbah, urniku ali o tem, kaj pričakovati prvič? Piši nam — običajno odgovorimo v enem dnevu.</p>
+  </div>
+</section>
+
+<svg class="beat-line container" viewBox="0 0 1140 28" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,14 L120,14 L140,4 L160,24 L180,14 L300,14 L320,4 L340,24 L360,14 L1140,14" />
+</svg>
+
+<section>
+  <div class="container contact-grid">
+
+    <div>
+      <div class="contact-info-card">
+        <div class="info-row">
+          <div>
+            <span class="label">Naslov</span>
+            Dvorana Dom Krajanov Skoke<br>
+            Uskoška ulica 58, 2204 Miklavž na Dravskem polju
+          </div>
+        </div>
+        <div class="info-row">
+          <div>
+            <span class="label">E-pošta</span>
+            <a href="mailto:plesna.sprostitev@gmail.com">plesna.sprostitev@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <div>
+            <span class="label">Urnik vadb</span>
+            Sre: 18.00 – 19.00
+          </div>
+        </div>
+        <a href="mailto:plesna.sprostitev@gmail.com?subject=Povpra%C5%A1evanje%20o%20vadbi" class="btn btn-primary" style="margin-top: 8px;">Piši nam neposredno</a>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=Uskoška+ulica+58,+2204+Miklavž+na+Dravskem+polju&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Zemljevid lokacije studia">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Pošlji nam sporočilo</h3>
+      <form id="contact-form" action="https://formspree.io/f/mwlkqvdq" method="POST">
+        <div class="form-row">
+          <label for="name">Ime</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">E-pošta</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Sporočilo</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Pošlji sporočilo</button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Studio<span>Ritem</span></div>
+        <p style="margin-top: 12px;">Studio metode Groove za vsako starost in vsako telo.</p>
+      </div>
+      <div>
+        <h4>Raziskuj</h4>
+        <ul>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="index.html#about">O nas</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:plesna.sprostitev@gmail.com">plesna.sprostitev@gmail.com</a></li>
+          <li>Dvorana Dom Krajanov Skoke<br>Uskoška ulica 58, 2204 Miklavž na Dravskem polju</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Studio Ritem. Vse pravice pridržane.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
