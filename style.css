@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
   line-height: 1.1;
 }
 
-h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); }
+h1 { font-size: clamp(2rem, 5vw, 3.6rem); }
 h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
 h3 { font-size: 1.3rem; }
 
@@ -66,6 +66,62 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   color: var(--color-gold);
   display: inline-block;
   margin-bottom: 0.8em;
+}
+
+.groove {
+  font-style: italic;
+}
+
+/* ===========================================================
+   Info box — bordered callout with overlaid heading
+   =========================================================== */
+.info-box {
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius);
+  padding: 36px 28px 28px;
+  margin: 0 auto;
+  max-width: 640px;
+  min-height: 160px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.info-box legend {
+  padding: 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: var(--color-bg);
+}
+.info-box legend .pop {
+  color: var(--color-pop);
+  font-style: italic;
+}
+.info-box p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Downward arrow, placed after a section to point at what follows */
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.arrow-down svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-pop);
+  animation: arrow-bounce 1.6s ease-in-out infinite;
+}
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arrow-down svg { animation: none; }
 }
 
 /* ===========================================================
