@@ -73,20 +73,66 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 }
 
 /* ===========================================================
+   Intro quote — opening statement section
+   =========================================================== */
+.quote-intro {
+  padding: 88px 0 40px;
+  text-align: center;
+  position: relative;
+}
+.quote-intro .container {
+  max-width: 760px;
+}
+.quote-intro .quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-pop);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: -0.3em;
+}
+.quote-intro blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0 auto;
+  max-width: 640px;
+}
+.quote-intro .quote-underline {
+  width: 64px;
+  height: 3px;
+  background: var(--color-pop);
+  border-radius: 2px;
+  margin: 32px auto 0;
+}
+
+/* ===========================================================
    Info box — bordered callout with overlaid heading
    =========================================================== */
 .info-box {
-  border: 2px solid var(--color-text);
-  border-radius: var(--radius);
-  padding: 36px 28px 28px;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-card), var(--color-bg-alt));
+  border-radius: 24px;
+  padding: 66px 58px;
   margin: 0 auto;
-  max-width: 640px;
-  min-height: 160px;
+  max-width: 880px;
+  min-height: 260px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 18px;
+}
+.info-box-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--color-text-muted);
 }
 .info-box legend {
   padding: 0 14px;
@@ -101,18 +147,24 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 }
 .info-box p {
   margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  max-width: 620px;
 }
 
 /* Downward arrow, placed after a section to point at what follows */
 .arrow-down {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 28px 0;
 }
 .arrow-down svg {
-  width: 32px;
-  height: 32px;
+  width: 52px;
+  height: 52px;
   color: var(--color-pop);
   animation: arrow-bounce 1.6s ease-in-out infinite;
 }
@@ -411,9 +463,8 @@ section { padding: 72px 0; }
 .about-image {
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 3 / 4;
 }
-.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-image img { width: 100%; height: auto; display: block; }
 blockquote {
   font-family: var(--font-display);
   font-style: italic;
@@ -421,11 +472,50 @@ blockquote {
   margin: 0 0 20px;
   color: var(--color-text);
 }
+.about-copy blockquote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
 cite {
   font-family: var(--font-mono);
   font-style: normal;
   font-size: 0.8rem;
   color: var(--color-gold);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  position: relative;
+}
+.testimonial-card::before {
+  content: "“";
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-pop);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 4px;
+}
+.testimonial-card p {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* Stats strip */
@@ -598,6 +688,7 @@ footer.site-footer {
   .hero-image { order: -1; max-width: 420px; margin: 0 auto; }
   .perks-grid,
   .programs-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .stats-strip { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
