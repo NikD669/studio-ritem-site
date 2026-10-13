@@ -4,15 +4,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plesna Vadba — Plesna šola</title>
+  <title>Groove plesna vadba Maribor | Plesna Vadba</title>
   <meta name="description"
-    content="Groove je plesna vadba brez koreografije, kjer pride v ospredje lastna kreativnost. Plesno predznanje ni potrebno. Je aktivnost, kjer glavni cilj ni popolnost ampak dobro počutje." />
+    content="Groove je plesna vadba brez koreografije za vsako telo. Predznanje ni potrebno, prva ura je brezplačna. Miklavž na Dravskem polju, Maribor." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <meta name="keywords" content="plesna vadba, Maribor, Štajerska, lastno izražanje, iskanje sebe, gibanje, solo ples, ples v skupini, sprostitev, groove metoda, ples brez koreografije" />
+
+  <link rel="canonical" href="https://zagroovaj.si/" />
+  <meta name="theme-color" content="#fff6ee" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="96x96" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Plesna Vadba" />
+  <meta property="og:title" content="Plesna Vadba Groove — plesna vadba brez koreografije" />
+  <meta property="og:description"
+    content="Plesna vadba za vsako telo. Predznanje ni potrebno, prva ura je brezplačna." />
+  <meta property="og:url" content="https://zagroovaj.si/" />
+  <meta property="og:image" content="https://zagroovaj.si/public/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="sl_SI" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DanceSchool",
+  "name": "Plesna Vadba Groove",
+  "description": "Groove je plesna vadba brez koreografije, kjer pride v ospredje lastna kreativnost. Plesno predznanje ni potrebno.",
+  "url": "https://zagroovaj.si/",
+  "image": "https://zagroovaj.si/public/images/og-image.jpg",
+  "email": "plesna.sprostitev@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Uskoška ulica 58",
+    "addressLocality": "Miklavž na Dravskem polju",
+    "postalCode": "2204",
+    "addressCountry": "SI"
+  },
+  "areaServed": ["Maribor", "Miklavž na Dravskem polju", "Štajerska"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "18:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": ["https://www.facebook.com/share/1FZcJgLo23/"]
+}
+</script>
+  <meta name="keywords"
+    content="plesna vadba, Maribor, Štajerska, lastno izražanje, iskanje sebe, gibanje, solo ples, ples v skupini, sprostitev, groove metoda, ples brez koreografije" />
 </head>
 
 <body>
@@ -27,7 +75,7 @@
       </div>
     </div>
   </div>
-  
+
 
   <header class="site-header">
     <div class="container nav-row">
@@ -45,23 +93,25 @@
   </header>
 
   <section style="margin:0;padding:0;" class="info-box-section">
-  <br><br>
-  <fieldset class="info-box">
-    <p>Obstaja dejavnost, ki v le nekaj minutah dvigne razpoloženje, pospeši srčni utrip, prežene utrujenost in te spravi v boljšo voljo.</p>
-  </fieldset>
+    <br><br>
+    <fieldset class="info-box">
+      <p>Obstaja dejavnost, ki v le nekaj minutah dvigne razpoloženje, pospeši srčni utrip, prežene utrujenost in te
+        spravi v boljšo voljo.</p>
+    </fieldset>
 
-  <div class="arrow-down">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="4" x2="12" y2="20"></line>
-      <polyline points="6 14 12 20 18 14"></polyline>
-    </svg>
-  </div>
+    <div class="arrow-down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="12" y1="4" x2="12" y2="20"></line>
+        <polyline points="6 14 12 20 18 14"></polyline>
+      </svg>
+    </div>
 
   </section>
   <section class="hero">
     <div class="container about-grid">
       <div class="about-image">
-        <img src="public/images/img_dance_black3.jpg" alt="Skupina plesalcev med vadbo" />
+        <img src="public/images/img_dance_black3.jpg" loading="lazy" alt="Skupina plesalcev med vadbo" />
       </div>
       <div class="about-copy">
         <h1>Začneš plesati... </h1>
@@ -89,7 +139,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="public/images/front.png" alt="Skupina ljudi sproščeno pleše v svetlem studiu" />
+        <img src="public/images/front.webp" loading="lazy" alt="Skupina ljudi sproščeno pleše v svetlem studiu" />
       </div>
     </div>
   </section>
@@ -115,18 +165,25 @@
         </div>
         <div class="perk-card">
           <span class="perk-icon">03</span>
+          <h3>Groove povezuje um in telo</h3>
+          <p>Gre za skupinski ples, kjer se vračamo nazaj k sebi, poudarek je na tvojih občutkih - kaj dobro dene
+            tvojemu telesu.
+            Ni pomembno kako izgleda, pomembno je, da se ti dobro počutiš.</p>
+        </div>
+        <div class="perk-card">
+          <span class="perk-icon">04</span>
           <h3>Varen prostor</h3>
           <p>Brez obsojanja, brez prve in zadnje vrste. Tvoj način gibanja je edini pravi način. In to spodbujamo.
             Lastno izražanje in kreativnost.</p>
         </div>
         <div class="perk-card">
-          <span class="perk-icon">04</span>
+          <span class="perk-icon">05</span>
           <h3>Brez korakov za učenje</h3>
           <p>Ponudimo preprost ritem ali namig, ti pa ga interpretiraš tako kot čuti tvoje telo. Brez rutine, brez
             pomnjenja. Vključeni so raznoliki plesni stili.</p>
         </div>
         <div class="perk-card">
-          <span class="perk-icon">05</span>
+          <span class="perk-icon">06</span>
           <h3>Ura, ki jo podariš sebi</h3>
           <p>Vsaka vadba se gradi od nežnega ogrevanja do maksimalnega srčnega utripa. Zaključi se z umirjanjem in
             regeneracijo.</p>
@@ -142,7 +199,7 @@
         <div>
           <h2>Tvoja prva <span class="groove">Groove</span> ura je na naš račun.</h2>
         </div>
-        <a href="contact.html" class="btn btn-primary">Rezerviraj brezplačno uro</a>
+        <a href="index.html#contact" class="btn btn-primary">Rezerviraj brezplačno uro</a>
       </div>
     </div>
   </section>

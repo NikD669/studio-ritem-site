@@ -1,18 +1,23 @@
 /* ===========================================================
-   Studio Ritem — design tokens
+   Plesna Vadba — design tokens
    =========================================================== */
 :root {
-  --color-bg: #0d0d0d;
-  --color-bg-alt: #161616;
-  --color-card: #1c1c1c;
-  --color-text: #f5f5f3;
-  --color-text-muted: #9a9a9a;
-  --color-accent: #f5f5f3;
+  --color-bg: #fff6ee;
+  --color-bg-alt: #fde4df;
+  --color-card: #ffffff;
+  --color-text: #2d2033;
+  --color-text-muted: #6b5a6e;
+  --color-accent: #2d2033;
   --color-accent-dim: #ffffff;
-  --color-gold: #ff5a36;
-  --color-pop: #ff5a36;
-  --color-pop-soft: #ff8a5c;
-  --color-border: rgba(245, 245, 243, 0.12);
+  --color-gold: #b82e4a;
+  --color-pop: #cf3553;
+  --color-pop-soft: #f7a98b;
+  --color-border: rgba(45, 32, 51, 0.12);
+
+  --color-sun: #f9c846;
+  --color-lav: #b7a6f0;
+  --color-mint: #bdebdd;
+  --color-peach: #f7a98b;
 
   --font-display: "Fraunces", "Georgia", serif;
   --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
@@ -36,6 +41,8 @@ body {
 }
 
 img { max-width: 100%; display: block; }
+
+::selection { background: var(--color-sun); color: var(--color-text); }
 
 a { color: inherit; text-decoration: none; }
 
@@ -115,7 +122,7 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
    =========================================================== */
 .info-box {
   border: 1px solid var(--color-border);
-  background: linear-gradient(135deg, var(--color-card), var(--color-bg-alt));
+  background: linear-gradient(135deg, var(--color-card), var(--color-bg));
   border-radius: 24px;
   padding: 66px 58px;
   margin: 0 auto;
@@ -128,6 +135,7 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   justify-content: center;
   text-align: center;
   gap: 18px;
+  box-shadow: 0 24px 60px -30px rgba(45, 32, 51, 0.35);
 }
 .info-box-icon {
   width: 44px;
@@ -154,6 +162,14 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   font-size: 1.8rem;
   line-height: 1.5;
   max-width: 620px;
+}
+
+/* Soft pastel glow behind the opening section */
+.info-box-section {
+  background:
+    linear-gradient(to bottom, transparent 70%, var(--color-bg) 100%),
+    radial-gradient(circle at 12% 25%, rgba(247, 169, 139, 0.35), transparent 42%),
+    radial-gradient(circle at 88% 10%, rgba(183, 166, 240, 0.35), transparent 42%);
 }
 
 /* Downward arrow, placed after a section to point at what follows */
@@ -195,18 +211,19 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: #0d0d0d;
+  background: var(--color-pop);
+  color: #ffffff;
   font-weight: 700;
+  box-shadow: 0 10px 24px -12px rgba(207, 53, 83, 0.7);
 }
-.btn-primary:hover { background: transparent; color: var(--color-text); border-color: var(--color-text); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--color-text); color: #ffffff; border-color: var(--color-text); transform: translateY(-2px); }
 
 .btn-ghost {
   background: transparent;
   color: var(--color-text);
-  border-color: var(--color-border);
+  border-color: var(--color-text-muted);
 }
-.btn-ghost:hover { border-color: var(--color-text); background: var(--color-text); color: #0d0d0d; }
+.btn-ghost:hover { border-color: var(--color-text); background: var(--color-text); color: #ffffff; }
 
 /* ===========================================================
    Top utility bar
@@ -242,7 +259,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(27, 18, 32, 0.92);
+  background: rgba(255, 246, 238, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -334,8 +351,9 @@ nav.main-nav a.active {
   padding: 96px 0 80px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 80% 0%, rgba(255,90,54,0.12), transparent 55%),
-    radial-gradient(ellipse at 10% 100%, rgba(255,255,255,0.05), transparent 50%);
+    linear-gradient(to bottom, var(--color-bg) 0, transparent 22%, transparent 78%, var(--color-bg) 100%),
+    radial-gradient(ellipse at 85% 0%, rgba(247, 169, 139, 0.30), transparent 55%),
+    radial-gradient(ellipse at 5% 100%, rgba(183, 166, 240, 0.28), transparent 50%);
 }
 .hero-grid {
   display: grid;
@@ -361,7 +379,7 @@ nav.main-nav a.active {
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
+  box-shadow: 14px 14px 0 var(--color-lav);
 }
 .hero-image img {
   width: 100%;
@@ -372,7 +390,7 @@ nav.main-nav a.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(13,13,13,0.85));
+  background: linear-gradient(180deg, transparent 60%, rgba(207, 53, 83, 0.12));
 }
 
 /* ===========================================================
@@ -394,10 +412,19 @@ section { padding: 72px 0; }
 }
 .perk-card {
   background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border: 1px solid transparent;
+  border-radius: 16px;
   padding: 28px;
+  box-shadow: 0 14px 30px -22px rgba(45, 32, 51, 0.5);
 }
+.perk-card h3 { color: var(--color-text); }
+.perk-card p { color: #54445a; }
+.perk-card:nth-child(1) { background: #fde0dc; }
+.perk-card:nth-child(2) { background: #e6dffb; }
+.perk-card:nth-child(3) { background: #d5f2e8; }
+.perk-card:nth-child(4) { background: #fdf0be; }
+.perk-card:nth-child(5) { background: #fddcc8; }
+.perk-card:nth-child(6) { background: #d8eafb; }
 .perk-card .perk-icon {
   font-family: var(--font-display);
   font-style: italic;
@@ -422,7 +449,7 @@ section { padding: 72px 0; }
 }
 .program-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px -20px rgba(45, 32, 51, 0.35);
 }
 .program-media { aspect-ratio: 4 / 3; overflow: hidden; }
 .program-media img { width: 100%; height: 100%; object-fit: cover; }
@@ -463,6 +490,7 @@ section { padding: 72px 0; }
 .about-image {
   border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: -14px 14px 0 var(--color-peach);
 }
 .about-image img { width: 100%; height: auto; display: block; }
 blockquote {
@@ -495,10 +523,14 @@ cite {
 .testimonial-card {
   background: var(--color-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-left: 6px solid var(--color-pop);
+  border-radius: 16px;
   padding: 28px 26px;
   position: relative;
+  box-shadow: 0 14px 30px -22px rgba(45, 32, 51, 0.5);
 }
+.testimonial-card:nth-child(2) { border-left-color: var(--color-lav); }
+.testimonial-card:nth-child(3) { border-left-color: var(--color-sun); }
 .testimonial-card::before {
   content: "“";
   font-family: var(--font-display);
@@ -543,8 +575,8 @@ cite {
 
 /* CTA banner */
 .cta-banner {
-  background: linear-gradient(120deg, var(--color-pop), var(--color-pop-soft));
-  border-radius: var(--radius);
+  background: linear-gradient(120deg, var(--color-peach), var(--color-sun));
+  border-radius: 20px;
   padding: 56px;
   display: flex;
   align-items: center;
@@ -552,9 +584,9 @@ cite {
   gap: 24px;
   flex-wrap: wrap;
 }
-.cta-banner h2 { margin: 0; color: #0d0d0d; }
-.cta-banner .btn-primary { background: #0d0d0d; color: #f5f5f3; }
-.cta-banner .btn-primary:hover { background: transparent; color: #0d0d0d; border-color: #0d0d0d; }
+.cta-banner h2 { margin: 0; color: var(--color-text); }
+.cta-banner .btn-primary { background: var(--color-text); color: #ffffff; box-shadow: none; }
+.cta-banner .btn-primary:hover { background: transparent; color: var(--color-text); border-color: var(--color-text); }
 
 /* ===========================================================
    Contact page
@@ -623,7 +655,7 @@ cite {
 }
 .form-row input:focus,
 .form-row textarea:focus {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-pop);
   outline-offset: 1px;
 }
 .form-row textarea { resize: vertical; min-height: 130px; }
@@ -639,8 +671,8 @@ cite {
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
-.form-status.success { color: #7be08a; }
-.form-status.error { color: var(--color-accent); }
+.form-status.success { color: #1a7f45; }
+.form-status.error { color: var(--color-pop); }
 
 /* ===========================================================
    Footer
@@ -719,6 +751,13 @@ footer.site-footer {
     padding: 8px 24px 20px;
   }
   nav.main-nav a { display: block; padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+
+  .info-box {
+    width: calc(100% - 32px);
+    padding: 40px 24px;
+    min-height: 0;
+  }
+  .info-box p { font-size: 1.35rem; }
 
   .perks-grid,
   .programs-grid { grid-template-columns: 1fr; }
